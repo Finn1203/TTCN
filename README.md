@@ -1,2 +1,0 @@
-# TTCN
-GROUP 13
