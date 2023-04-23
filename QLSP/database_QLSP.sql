@@ -1,8 +1,8 @@
-create database QLSP
+create database QLBHDT
 go
 use master
-drop database QLSP
-use QLSP
+drop database QLBHDT
+use QLBHDT
 go
 
 create table tblEmployee(
