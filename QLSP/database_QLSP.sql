@@ -5,12 +5,12 @@ drop database QLSP
 use QLSP
 go
 
-create table tblUser(
+create table tblEmployee(
       ngaytao datetime default(getdate()) null,
 	  nguoitao varchar(30) default('admin') null,
 	  ngaycapnhat datetime default(getdate()) null,
 	  nguoicapnhat varchar(30) default('admin') null,
-	  id_user varchar(50) not null primary key,
+	  id_empl varchar(50) not null primary key,
 	  ho nvarchar(10) not null,
 	  tendem nvarchar(20) null,
 	  ten nvarchar(10) not null,
@@ -65,7 +65,7 @@ create table tblProduct(
 
 select * from tblProduct
 select * from tblAgent
-select * from tblUser
+select * from tblEmployee
 select * from tblCategory
 --id_agent tự động tăng nên không cần cho vào lệnh insert
 insert into tblAgent(ho,tendem,ten,gioitinh,ngaysinh,dienthoai,email,diachi)
@@ -89,7 +89,7 @@ create sequence UserSeq
 
 	   select next value for UserSeq
 
-insert into tblUser(masinhvien,ho,tendem,ten,ngaysinh,gioitinh)
+insert into tblEmployee(id_empl,ho,tendem,ten,ngaysinh,gioitinh)
 values('19SV' + CAST(next value for UserSeq as varchar(30)),N'Trần',N'Trọng',N'Quang','2000-01-12',1),
 ('19SV' + CAST(next value for UserSeq as varchar(30)),N'Dương',N'',N'Quá','2000-01-11',1),
 ('19SV' + CAST(next value for UserSeq as varchar(30)),N'Tiểu',N'Long',N'Nữ','2000-01-31',0),
